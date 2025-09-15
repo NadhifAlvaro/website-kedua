@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Portofolio Nadhif</title>
+  <style>
+    :root {
+      --utama: #4e54c8;
+      --sekunder: #8f94fb;
+      --gelap: #222;
+      --terang: #f5f5f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: var(--terang);
+      color: var(--gelap);
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--gelap);
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--sekunder);
+    }
+
+    /* Hero/Home */
+    #home {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url("white-bokeh-lights-black-background_23-2147873262 (1).jpg") center center / cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 1s ease-in-out;
+      background-attachment: fixed; 
+   }
+
+
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    /* Section umum */
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--utama);
+    }
+
+    /* Tentang */
+    #about {
+      text-align: center;
+    }
+
+    #about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid var(--utama);
+      margin-bottom: 20px;
+    }
+
+    /* Background Pendidikan */
+    #education .timeline {
+      display: grid;
+      gap: 20px;
+    }
+
+    .edu-card {
+      background: white;
+      border-left: 5px solid var(--utama);
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .edu-card:hover {
+      transform: translateX(10px);
+    }
+
+    .edu-card h3 {
+      margin-bottom: 5px;
+      color: var(--gelap);
+    }
+
+    .edu-card span {
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    /* Kontak */
+    #contact {
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    footer {
+      background: var(--gelap);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Animasi */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      #home h1 { font-size: 2rem; }
+      nav { flex-wrap: wrap; gap: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">Tentang</a>
+    <a href="#education">Background Pendidikan</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <h1>Halo, Saya Nadhif</h1>
+    <p>Mahasiswa Universitas Negeri Jakarta | Sistem & Teknologi Informasi</p>
+  </section>
+
+  <!-- Tentang -->
+  <section id="about">
+    <h2>Tentang Saya</h2>
+    <img src="WhatsApp Image 2025-09-14 at 15.16.31_aa86c9d6.jpg" alt="Foto Profil">
+    <p>Saya adalah mahasiswa UNJ yang sedang menjalani pendidikan sarjana program studi Sistem Dan Teknologi Informasi semester 3, saya tertarik dalam menambah pengalaman di bidang pengembangan bisnis, data analyst dan pemasaran di beberapa perusahaan dan organisasi. Dalam ketertarikan itu saya telah telah mengasah kemampuannya dalam manajemen waktu, kerja tim, dan pemecahan masalah.</p>
+    <p>Saya sedang menjalani tahap belajar dalam Excel, Phyton, SQL, dan berbagai tools visualisasi data seperti Tableau, Power BI. Saya selalu mengikuti perkembangan terbaru dalam dunia Data Analyst.</p>
+  </section>
+
+  <!-- Background Pendidikan -->
+  <section id="education">
+    <h2>Background Pendidikan</h2>
+    <div class="timeline">
+      <div class="edu-card">
+        <h3>SMA Negeri 18 Bekasi</h3>
+        <span>2021 - 2024</span>
+        <p>Jurusan IPA dengan minat pada teknologi dan analisis data.</p>
+      </div>
+      <div class="edu-card">
+        <h3>Universitas Negeri Jakarta</h3>
+        <span>2024 - Sekarang</span>
+        <p>Program Studi Sistem & Teknologi Informasi, fokus pada Data Analyst dan pengembangan sistem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact">
+    <h2>Kontak</h2>
+    <div class="contact-info">
+      <p>Email: nadhifd59@email.com</p>
+      <p>Instagram: @nadhifalvarro_</p>
+    </div>
+  </section>
